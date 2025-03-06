@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.urls import path
-from . import views
+from django.http import HttpResponse
 
-urlpatterns = [
-    path('members/', views.members, name='members'),
-]
+def members(request):
+    return HttpResponse("Hello world!")
